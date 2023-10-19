@@ -6,8 +6,8 @@ from app.utils.sondage import sondage
 from app.utils.chifoumi import chifoumi_game
 
 intents = discord.Intents.default()
-intents.typing = False
-intents.presences = False
+intents.typing = True
+intents.presences = True
 intents.members = True
 intents.message_content = True
 
@@ -27,5 +27,10 @@ async def on_member_join(member):
 bot.add_command(sondage)
 
 bot.add_command(chifoumi_game)
+from app.utils.moderation import ban, kick, mute
+
+bot.add_command(ban)
+bot.add_command(kick)
+bot.add_command(mute)
 
 bot.run(TOKEN)

@@ -6,7 +6,8 @@ EMOJI_NUMBERS = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣
 
 
 async def simple_poll(ctx, question):
-    poll_message = await ctx.send(f"**Sondage :** {question}")
+    embed = discord.Embed(title=f"**Sondage :** {question}")
+    poll_message = await ctx.send(embed=embed)
     for emoji in ("👍", "👎", "🤷"):
         await poll_message.add_reaction(emoji)
 
