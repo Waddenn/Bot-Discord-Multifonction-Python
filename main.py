@@ -6,6 +6,7 @@ from app.utils.sondage import sondage
 from app.utils.info import membersCount, channelCount
 from app.utils.convert import convert
 from app.utils.moderation import check_message, ban, kick, mute
+from app.utils.chifoumi import chifoumi_game
 
 intents = discord.Intents.default()
 intents.typing = False
@@ -38,4 +39,6 @@ bot.add_command(convert)
 bot.add_command(ban)
 bot.add_command(kick)
 bot.add_command(mute)
+bot.add_command(chifoumi_game)
+
 bot.run(TOKEN)
