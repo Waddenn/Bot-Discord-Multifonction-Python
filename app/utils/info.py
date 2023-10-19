@@ -15,6 +15,9 @@ async def membersCount(ctx):
 
 @commands.command()
 async def channelCount(ctx):
+    nb_text_channels = len(ctx.guild.text_channels)
+    nb_voice_channels = len(ctx.guild.voice_channels)
+    nb_channels = nb_text_channels + nb_voice_channels
     await ctx.send(
-        f"Il y a {len(ctx.guild.text_channels) + len(ctx.guild.voice_channels)} canaux :\n{len(ctx.guild.text_channels)} canaux textuel et {len(ctx.guild.voice_channels)} canaux vocales"
+        f"Il y a {nb_channels} canaux :\n{nb_text_channels} canaux textuel et {nb_voice_channels} canaux vocales"
     )
