@@ -54,7 +54,7 @@ async def options_poll(ctx: commands.Context, question: str, options: list):
 
 
 @commands.command()
-async def sondage(
+async def poll(
     ctx: commands.Context, type_de_sondage: str, question: str, *options: str
 ):
     """
