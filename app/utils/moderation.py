@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
-from discord.ext import tasks
 import asyncio
+
 
 async def check_message(bot, message):
     """
@@ -18,6 +18,7 @@ async def check_message(bot, message):
         ctx = await bot.get_context(message)
         await ctx.send(f"Ce message contient un mot banni {ctx.author.mention}")
 
+
 @commands.command()
 @commands.has_permissions(ban_members=True)
 async def ban(ctx, member: discord.Member, *, reason="Je n'ai pas besoin de raison"):
@@ -28,10 +29,11 @@ async def ban(ctx, member: discord.Member, *, reason="Je n'ai pas besoin de rais
         ctx (commands.Context): Le contexte de la commande.
         member (discord.Member): Le membre à bannir.
         reason (str, optional): La raison du bannissement. Par défaut : "Je n'ai pas besoin de raison".
-    
+
     """
     await member.ban(reason=reason)
     await ctx.send(f"{member.mention} a été banni pour {reason}.")
+
 
 @commands.command()
 @commands.has_permissions(kick_members=True)
@@ -43,16 +45,20 @@ async def kick(ctx, member: discord.Member, *, reason="Je n'ai pas besoin de rai
         ctx (commands.Context): Le contexte de la commande.
         member (discord.Member): Le membre à expulser.
         reason (str, optional): La raison de l'expulsion. Par défaut : "Je n'ai pas besoin de raison".
-    
+
     """
     await ctx.send(member.name + " a été expulsé du serveur pour " + reason)
     await member.kick(reason=reason)
 
+
 muted_users = {}
+
 
 @commands.command()
 @commands.has_permissions(manage_messages=True)
-async def mute(ctx, member: discord.Member, duration: int, *, reason="Raison non spécifiée"):
+async def mute(
+    ctx, member: discord.Member, duration: int, *, reason="Raison non spécifiée"
+):
     """
     Met un membre en sourdine pour une durée définie dans tous les canaux textuels.
 
@@ -63,14 +69,20 @@ async def mute(ctx, member: discord.Member, duration: int, *, reason="Raison non
         reason (str, optional): La raison de la mise en sourdine. Par défaut : "Raison non spécifiée".
 
     """
-    text_channels = [channel for channel in ctx.guild.channels if isinstance(channel, discord.TextChannel)]
+    text_channels = [
+        channel
+        for channel in ctx.guild.channels
+        if isinstance(channel, discord.TextChannel)
+    ]
     overwrites = discord.PermissionOverwrite()
     overwrites.send_messages = False
 
     for channel in text_channels:
         await channel.set_permissions(member, overwrite=overwrites)
 
-    await ctx.send(f"{member.mention} a été mis en sourdine pour tous les canaux textuels pendant {duration} secondes pour: {reason}.")
+    await ctx.send(
+        f"{member.mention} a été mis en sourdine pour tous les canaux textuels pendant {duration} secondes pour: {reason}."
+    )
     await asyncio.sleep(duration)
     for channel in text_channels:
         await channel.set_permissions(member, overwrite=None)
