@@ -34,8 +34,8 @@ Ce bot Discord a été conçu par Lbutynski et Wade dans le cadre d'un projet sc
   - `!mute @[User] duration [raison]` - Met un utilisateur en sourdine pour une durée déterminée.
 
 - **Sondages**:
-  - `!sondage options "Votre question ici" "Option 1" "Option 2" ... "Option N"` - Crée un sondage avec plusieurs options.
-  - `!sondage simple "Votre question ici"` - Crée un sondage simple.
+  - `!poll options [question] [Option 1] [Option 2] ... [Option N]` - Crée un sondage avec plusieurs options.
+  - `!poll simple [question]` - Crée un sondage simple.
 
 - **Informations sur le serveur**:
   - `!membersCount` - Affiche le nombre total de membres sur le serveur.
