@@ -1,9 +1,9 @@
 # Bot Discord Multifonction
 
 ## Description:
-Ce bot Discord est conçu pour offrir une variété de petites fonctionnalités utiles pour les membres d'un serveur Discord.
+Ce bot Discord a été conçu par Lbutynski et Wade dans le cadre d'un projet scolaire d'une journée. Il est conçu pour offrir une variété de petites fonctionnalités utiles pour les membres d'un serveur Discord.
 
-## 🚀 Fonctionnalités principales:
+## 🚀 Fonctionnalités principales (obligatoires) :
 
 ### 1. Salutations:
    - Le bot envoie un message de bienvenue dans un canal spécifique lorsque qu'un nouvel utilisateur rejoint le serveur.
@@ -17,7 +17,7 @@ Ce bot Discord est conçu pour offrir une variété de petites fonctionnalités 
 ### 4. Convertisseur de devises:
    - Les utilisateurs peuvent convertir un montant d'une devise à une autre.
 
-## 📌 Fonctionnalités supplémentaires:
+## 📌 Fonctionnalités supplémentaires (facultatives) :
 
 ### 5. Modérateur:
    - Le bot détecte et supprime automatiquement des messages contenant des mots interdits.
