@@ -3,10 +3,11 @@ from discord.ext import commands
 from config.private import TOKEN
 from app.utils.salutations import welcome_new_member
 from app.utils.sondage import sondage
+from app.utils.info import membersCount
 
 intents = discord.Intents.default()
 intents.typing = False
-intents.presences = False
+intents.presences = True
 intents.members = True
 intents.message_content = True
 
@@ -24,5 +25,6 @@ async def on_member_join(member):
 
 
 bot.add_command(sondage)
+bot.add_command(membersCount)
 
 bot.run(TOKEN)
