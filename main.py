@@ -45,6 +45,7 @@ async def on_message(message):
         message (discord.Message): Le message envoyé.
     """
     await check_message(bot, message)
+    await bot.process_commands(message)
 
 
 bot.add_command(poll)
