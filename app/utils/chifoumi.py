@@ -3,6 +3,16 @@ import random
 
 
 def determine_winner(user_choice, bot_choice):
+    """
+    Détermine le gagnant du jeu de chifoumi (pierre-feuille-ciseaux).
+
+    Args:
+        user_choice (str): Le choix de l'utilisateur (pierre, feuille, ou ciseaux).
+        bot_choice (str): Le choix du bot (pierre, feuille, ou ciseaux).
+
+    Returns:
+        str: "égalité" si les deux choix sont les mêmes, "utilisateur" si l'utilisateur gagne, et "bot" si le bot gagne.
+    """
     if user_choice == bot_choice:
         return "égalité"
     elif (
@@ -17,6 +27,13 @@ def determine_winner(user_choice, bot_choice):
 
 @commands.command(name="chifoumi")
 async def chifoumi_game(ctx, choice: str = None):
+    """
+    Joue une partie de chifoumi (pierre-feuille-ciseaux) avec le bot.
+
+    Args:
+        ctx (commands.Context): Le contexte de la commande.
+        choice (str, optional): Le choix de l'utilisateur. Peut être "pierre", "feuille", ou "ciseaux".
+    """
     if not choice:
         await ctx.send("Veuillez entrer un choix: pierre, feuille ou ciseaux.")
         return

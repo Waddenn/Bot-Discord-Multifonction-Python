@@ -16,21 +16,32 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-
 @bot.event
 async def on_ready():
+    """
+    Fonction exécutée lorsque le bot est prêt et connecté.
+    """
     print(f"{bot.user} est connecté au serveur")
-
 
 @bot.event
 async def on_member_join(member):
-    await welcome_new_member(bot, member)
+    """
+    Fonction exécutée lorsqu'un membre rejoint le serveur.
 
+    Args:
+        member (discord.Member): Le membre qui a rejoint.
+    """
+    await welcome_new_member(bot, member)
 
 @bot.event
 async def on_message(message):
-    await check_message(bot, message)
+    """
+    Fonction exécutée lorsqu'un message est envoyé dans un canal.
 
+    Args:
+        message (discord.Message): Le message envoyé.
+    """
+    await check_message(bot, message)
 
 bot.add_command(sondage)
 bot.add_command(membersCount)
