@@ -1,10 +1,10 @@
 import discord
 from discord.ext import commands
 from config.private import TOKEN
-from app.utils.salutations import welcome_new_member
-from app.utils.sondage import poll
-from app.utils.info import membersCount, channelCount
-from app.utils.convert import convert
+from app.utils.welcome_messages import welcome_new_member
+from app.utils.polls import poll
+from app.utils.server_info import membersCount, channelCount
+from app.utils.currency_converter import convert
 from app.utils.moderation import check_message, ban, kick, mute
 from app.utils.chifoumi import chifoumi_game
 
