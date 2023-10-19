@@ -1,11 +1,12 @@
 # Bot Discord Multifonction
 
+![Discord_t5xAD2VPTs](https://github.com/Waddenn/Bot-Discord-Multifonction-Python/assets/115143365/3658e461-f676-4bd3-8a24-0169e45c50be)
+
 ## Description:
 Ce bot Discord a été conçu par Lbutynski et Wade dans le cadre d'un projet scolaire d'une journée. Il est conçu pour offrir une variété de petites fonctionnalités utiles pour les membres d'un serveur Discord.
 
 Voici le document qui contient l'énoncé du Projet :
 [Enoncé du Projet Bot Discord.pdf](https://github.com/Waddenn/Bot-Discord-Multifonction-Python/files/13047418/Enonce.du.Projet.Bot.Discord.pdf)
-
 
 ## 🚀 Fonctionnalités principales (obligatoires) :
 
