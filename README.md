@@ -1,7 +1,7 @@
 # Bot Discord Multifonction
 
 ## Description:
-Ce bot Discord est conçu pour offrir une variété de petites fonctionnalités utiles pour les membres d'un serveur Discord. Il est écrit en utilisant des techniques asynchrones et fonctionne dans un environnement virtuel.
+Ce bot Discord est conçu pour offrir une variété de petites fonctionnalités utiles pour les membres d'un serveur Discord.
 
 ## 🚀 Fonctionnalités principales:
 
