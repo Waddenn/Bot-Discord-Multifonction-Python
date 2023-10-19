@@ -1,3 +1,5 @@
 env
 .env
 private.py
+private_config.json
+__pycache__
