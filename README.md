@@ -47,8 +47,3 @@ Ce bot Discord est conçu pour offrir une variété de petites fonctionnalités 
 - **Chifoumi**:
   - `!chifoumi [pierre, feuille, ciseaux]` - Joue à pierre-papier-ciseaux contre le bot.
 
-> **Note**: Assurez-vous d'avoir toutes les permissions nécessaires pour exécuter certaines de ces commandes, en particulier les commandes de modération.
-
---- 
-
-Vous pouvez copier et coller ce texte dans votre fichier README.md sur GitHub pour avoir une belle mise en forme.
