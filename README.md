@@ -1,7 +1,7 @@
 # Bot Discord Multifonction
 
 ## Description:
-Ce bot Discord a été conçu par Lbutynski et Waddenn dans le cadre d'un projet scolaire d'une journée. Il est conçu pour offrir une variété de petites fonctionnalités utiles pour les membres d'un serveur Discord.
+Ce bot Discord a été conçu par Lbutynski et Wade dans le cadre d'un projet scolaire d'une journée. Il est conçu pour offrir une variété de petites fonctionnalités utiles pour les membres d'un serveur Discord.
 
 ## 🚀 Fonctionnalités principales (obligatoires) :
 
