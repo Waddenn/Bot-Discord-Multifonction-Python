@@ -5,6 +5,7 @@ from app.utils.salutations import welcome_new_member
 from app.utils.sondage import sondage
 from app.utils.info import membersCount, channelCount
 from app.utils.convert import convert
+from app.utils.moderation import check_message
 
 intents = discord.Intents.default()
 intents.typing = False
@@ -23,6 +24,11 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
     await welcome_new_member(bot, member)
+
+
+@bot.event
+async def on_message(message):
+    await check_message(bot, message)
 
 
 bot.add_command(sondage)
