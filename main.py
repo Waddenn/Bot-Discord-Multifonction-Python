@@ -5,7 +5,7 @@ from app.utils.salutations import welcome_new_member
 from app.utils.sondage import sondage
 from app.utils.info import membersCount, channelCount
 from app.utils.convert import convert
-from app.utils.moderation import check_message
+from app.utils.moderation import check_message, ban, kick, mute
 
 intents = discord.Intents.default()
 intents.typing = False
@@ -35,5 +35,7 @@ bot.add_command(sondage)
 bot.add_command(membersCount)
 bot.add_command(channelCount)
 bot.add_command(convert)
-
+bot.add_command(ban)
+bot.add_command(kick)
+bot.add_command(mute)
 bot.run(TOKEN)
