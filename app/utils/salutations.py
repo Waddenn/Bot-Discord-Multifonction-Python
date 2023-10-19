@@ -1,3 +1,4 @@
+from discord.ext import commands
 from config.private import CHANNEL_ID
 
 
