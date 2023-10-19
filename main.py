@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from config.private import TOKEN
 from app.utils.salutations import welcome_new_member
+from app.utils.sondage import sondage
 
 intents = discord.Intents.default()
 intents.typing = False
@@ -22,12 +23,6 @@ async def on_member_join(member):
     await welcome_new_member(bot, member)
 
 
-@bot.command()
-async def sondage(ctx, *, question):
-    poll_message = await ctx.send(f"**Sondage :** {question}")
-    await poll_message.add_reaction("👍")
-    await poll_message.add_reaction("👎")
-    await poll_message.add_reaction("🤷")
-
+bot.add_command(sondage)
 
 bot.run(TOKEN)
