@@ -17,7 +17,7 @@ Voici le document qui contient l'énoncé du Projet :
    - Les utilisateurs peuvent demander des informations sur le serveur comme le nombre total de membres, le nombre de membres en ligne, le nombre de canaux, etc.
 
 ### 3. Gestion des sondages:
-   - Les utilisateurs peuvent créer des sondages simples où d'autres membres peuvent voter en utilisant des réactions.
+   - Les utilisateurs peuvent créer des sondages simples ou avec options où d'autres membres peuvent voter en utilisant des réactions.
 
 ### 4. Convertisseur de devises:
    - Les utilisateurs peuvent convertir un montant d'une devise à une autre.
