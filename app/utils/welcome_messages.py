@@ -1,3 +1,6 @@
+import json
+
+
 async def welcome_new_member(bot, member):
     """
     Envoie un message de bienvenue à un nouveau membre dans un canal spécifique.
@@ -9,8 +12,9 @@ async def welcome_new_member(bot, member):
     Returns:
         Une réponse de bienvenue dans le canal spécifié.
     """
-    from main import CHANNEL_ID
-
+    with open("./config/config.json", "r") as config_file:
+        config = json.load(config_file)
+    CHANNEL_ID = config["CHANNEL_ID"]
     channel = bot.get_channel(CHANNEL_ID)
     if channel:
         await channel.send(

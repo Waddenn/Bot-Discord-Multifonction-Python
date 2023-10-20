@@ -51,9 +51,6 @@ async def kick(ctx, member: discord.Member, *, reason="Je n'ai pas besoin de rai
     await member.kick(reason=reason)
 
 
-muted_users = {}
-
-
 @commands.command()
 @commands.has_permissions(manage_messages=True)
 async def mute(
